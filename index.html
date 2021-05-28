@@ -11,12 +11,12 @@
 </head>
 <body>
 
-    <header class="site-header">
-        <div class="container">
-            <div class="header-top header-top__container">
+    <header class="site-header site-header__open">
+        <div class="header-top ">
+            <div class="container header-top__container">
                 <ul class="header-top__comunication-list">
                     <li class="header-top__comunication-item"><a class="header-top__comunication-link" href="#">Chat with us</a></li>
-                    <li class="header-top__comunication-item"><a class="header-top__comunication-link" href="tel:+420 336 775 664">+420 336 775 664</a></li>
+                    <li class="header-top__comunication-item"><a class="header-top__comunication-link" href="tel:+420336775664">+420 336 775 664</a></li>
                     <li class="header-top__comunication-item"><a class="header-top__comunication-link" href="mailto:info@freshnesecom.com">info@freshnesecom.com</a></li>
                 </ul>
                 <ul class="header-top__list">
@@ -24,10 +24,12 @@
                     <li class="header-top__item"><a  class="header-top__link" href="#">About Us</a></li>
                     <li class="header-top__item"><a  class="header-top__link" href="#">Careers</a></li>
                 </ul>
-            </div>
-            <div class="header-main header-main__container">
-                <a class="site-logo">
-                    <img class="site-logo__img" src="images/Freshnesecom.svg" alt="site-logo" width="177" height="18px">
+            </div>              
+        </div>
+        <div class="header-main ">
+            <div class="container header-main__container">
+                <a class="site-logo" href="#">
+                    <img class="site-logo__img" src="images/Freshnesecom.svg" alt="site-logo" width="177" height="18">
                 </a>
                 <form action="#" method="POST" class="header-form">
                     <select name="select" id="select" class="header-form__select">
@@ -46,8 +48,11 @@
                             <img class="magazine-img" src="images/magazine.svg" alt="magazine" width="24" height="24">
                         </a></li>
                 </ul>
+                <button class="header-main__menu-toggler" type="button" aria-label="open\close"></button>
             </div>
-            <nav class="sitenav sitenav__container">
+        </div>    
+        <nav class="sitenav ">
+            <div class="container sitenav__container">
                 <ul class="sitenav__list">
                     <li class="sitenav__item">
                         <a class="sitenav__link" href="#">Bakery</a>
@@ -122,8 +127,8 @@
                         </ul>
                     </li>
                 </ul>
-            </nav>
-        </div>
+            </div>         
+        </nav>               
     </header>
     <main class="site-main">
 
