@@ -19,7 +19,6 @@
 }
 
 /*WEB FONTS RELATED*/
-
 @font-face {
     font-family: "Open Sans";
     src: url("../fonts/") format("woff2"),
@@ -28,7 +27,6 @@
     font-style: normal;
     font-display: swap;
 }
-
 @font-face {
     font-family: "Poppins";
     src: url("../fonts/Poppins-Bold.woff2") format("woff2"),
@@ -37,7 +35,6 @@
     font-style: normal;
     font-display: swap;
 }
-
 @font-face {
     font-family: "Poppins";
     src: url("../fonts/Poppins-Medium.woff2") format("woff2"),
@@ -46,7 +43,6 @@
     font-style: normal;
     font-display: swap;
 }
-
 @font-face {
     font-family: "Poppins";
     src: url("../fonts/Poppins-SemiBold.woff2") format("woff2"),
@@ -60,7 +56,6 @@
 
 html{
     box-sizing: border-box;
-      overflow-x: hidden;
 }
 
 *,
@@ -73,9 +68,6 @@ img{
     height: auto;
 }
 body{
-    margin: 0;
-    padding: 0;
-  
     font-family: var(--site-text-font);
     font-style: normal;
     font-weight: normal;
@@ -100,11 +92,7 @@ body{
 /*//////////////////////////////////////////////// SITE HEADER ///////////////////////////////////////////////////*/
 
 .site-header {
-    position: sticky;
-    width: 100%;
-    left: 0;
-    right: 0;
-    top: 0;
+    background-color: var(--bg-white-color);
 }
 
 /* HEADER TOP */
@@ -175,7 +163,6 @@ body{
     padding: 0;
 }
 /* HEADER MAIN */
-
 .header-main {
     position: relative;
     background-color: var(--bg-white-color);
@@ -326,7 +313,6 @@ position: relative;
     background-size: 12px 12px;
     background-repeat: no-repeat;
     transition: 0.2s ease-in;
-
 }
 .sitenav__link {
     font-family: var(--accent-font);
@@ -340,7 +326,6 @@ position: relative;
 .dropdown-menu {
     display: none;
     position: absolute;
-    left: 0;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -354,7 +339,6 @@ position: relative;
 .dropdown-link:hover {
     background-color: var(--text-accent-color7);
     color: var(--text-accent-color);
-
 }
 .dropdown-link {
     display: block;
@@ -401,6 +385,14 @@ position: relative;
 }
 
 @media only screen and (max-width:600px) {
+    .site-header{
+        position: sticky;
+        width: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        
+    }
     @keyframes toggler {
         0%{
             transform: translateX(-250px);
@@ -467,13 +459,14 @@ position: relative;
         position: absolute;
         height: calc(100vh - 163px);
         top: 163px;
-        background-color: transparent;
+        background-color: var(--text-accent-color3);
     }
     .site-header__open .sitenav__container{
         animation: toggler 0.5s 1 forwards;
+    }
+    .sitenav__container{
         padding: 0;
         height: 100%;
-        background-color: var(--text-accent-color3)
     }
     .sitenav__list {
         flex-direction: column;
@@ -490,6 +483,20 @@ position: relative;
     }
     .sitenav__link {
         width: 100%;
+    }
+    .dropdown-menu {
+        display: none;
+        position: absolute;
+        left: 0;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        top: 100%;
+        border-radius: 5px;
+        border: 1px solid var(--text-accent-color3);
+        background-color: var(--bg-white-color);
+        transition: 0.2s ease-in;
+        z-index: 99;
     }
 }
 
@@ -518,10 +525,6 @@ position: relative;
 
 /*///////////////////////////////////////// SITE MAIN   /////////////////////////////////////////////////////*/
 
-.site-main{
-    
-}
-
 
 /*///////////////////////////////////////// SITE FOOTER /////////////////////////////////////////////////////*/
 
@@ -534,6 +537,7 @@ position: relative;
 /* FOOTER TOP */
 
 .footer-top {
+    
 }
 .footer-top__container{
     display: flex;
@@ -585,7 +589,7 @@ position: relative;
     .footer-top__wrap{
         width: 100%;
         margin-bottom: 30px;
-        justify-content: space-evenly;
+        justify-content: space-between;
     }
     .footer-top__wrap section{
     width: 200px;
@@ -603,7 +607,7 @@ position: relative;
         margin-bottom: 30px;
     }
 }
- 
+
 /* FOOTER MAIN */
 
 .footer-main {
