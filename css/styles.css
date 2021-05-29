@@ -60,6 +60,7 @@
 
 html{
     box-sizing: border-box;
+      overflow-x: hidden;
 }
 
 *,
@@ -72,6 +73,9 @@ img{
     height: auto;
 }
 body{
+    margin: 0;
+    padding: 0;
+  
     font-family: var(--site-text-font);
     font-style: normal;
     font-weight: normal;
@@ -99,6 +103,7 @@ body{
     position: sticky;
     width: 100%;
     left: 0;
+    right: 0;
     top: 0;
 }
 
@@ -106,7 +111,6 @@ body{
 
 .header-top{
     background-color: var(--bg-white-color);
-    
 }
 .header-top__container {
     display: flex;
@@ -336,9 +340,7 @@ position: relative;
 .dropdown-menu {
     display: none;
     position: absolute;
-    width: 100%;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 0;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -446,7 +448,6 @@ position: relative;
     .site-header__open{
         height: 100%;
         background-color: var(--text-accent-color4);
-        bottom: 0;
     }
     .site-header__open .header-main__menu-toggler{
         background-image: url(../images/toggler-menu-close.svg);
@@ -466,12 +467,13 @@ position: relative;
         position: absolute;
         height: calc(100vh - 163px);
         top: 163px;
-        background-color: var(--text-accent-color2);
+        background-color: transparent;
     }
     .site-header__open .sitenav__container{
         animation: toggler 0.5s 1 forwards;
         padding: 0;
         height: 100%;
+        background-color: var(--text-accent-color3)
     }
     .sitenav__list {
         flex-direction: column;
@@ -479,8 +481,7 @@ position: relative;
         width: 250px;
         height: 100%;
         padding: 8px;
-        background-color: var(--text-accent-color3);
-        opacity: 1;
+        background-color: var(--text-accent-color4);
     }
     .sitenav__item {
         width: 100%;
