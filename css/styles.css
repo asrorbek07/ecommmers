@@ -96,7 +96,6 @@ body{
 /*//////////////////////////////////////////////// SITE HEADER ///////////////////////////////////////////////////*/
 
 .site-header {
-    display: none;
     position: fixed;
     width: 100%;
     left: 0;
@@ -529,7 +528,6 @@ position: relative;
 /* FOOTER TOP */
 
 .footer-top {
-    display: none;
 }
 .footer-top__container{
     display: flex;
