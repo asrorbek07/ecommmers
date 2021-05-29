@@ -583,7 +583,7 @@ position: relative;
     .footer-top__wrap{
         width: 100%;
         margin-bottom: 30px;
-        justify-content: space-between;
+        justify-content: space-evenly;
     }
     .footer-top__wrap section{
     width: 200px;
