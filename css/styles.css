@@ -106,6 +106,7 @@ body{
 
 .header-top{
     background-color: var(--bg-white-color);
+    
 }
 .header-top__container {
     display: flex;
@@ -445,6 +446,7 @@ position: relative;
     .site-header__open{
         height: 100%;
         background-color: var(--text-accent-color4);
+        bottom: 0;
     }
     .site-header__open .header-main__menu-toggler{
         background-image: url(../images/toggler-menu-close.svg);
@@ -460,26 +462,25 @@ position: relative;
     }
     .site-header__open .sitenav{
         display: block;
-        width: 250px;
+        width: 100%;
         position: absolute;
         height: calc(100vh - 163px);
         top: 163px;
-        background-color: transparent;
+        background-color: var(--text-accent-color2);
     }
     .site-header__open .sitenav__container{
         animation: toggler 0.5s 1 forwards;
-    }
-    .sitenav__container{
         padding: 0;
         height: 100%;
-        background-color: var(--text-accent-color3);
     }
     .sitenav__list {
         flex-direction: column;
         align-items: flex-start;
-        width: 100%;
+        width: 250px;
         height: 100%;
         padding: 8px;
+        background-color: var(--text-accent-color3);
+        opacity: 1;
     }
     .sitenav__item {
         width: 100%;
