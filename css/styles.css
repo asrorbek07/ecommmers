@@ -321,11 +321,14 @@ position: relative;
     margin: 0;
     padding: 0;
 }
-.sitenav__item:not(:last-child) {
+.sitenav__item{
     position: relative;
-    margin-right: 43px;
+    
     display: flex;
     align-items: center;
+}
+.sitenav__item:not(:last-child) {
+    margin-right: 43px;
 }
 .sitenav__item:hover .dropdown-menu{
     display: block;
@@ -867,6 +870,222 @@ position: relative;
         width: auto;
     }
 }
+
+/*/////////////////////////////////////////////// OUR CUSTOMER SECTION //////////////////////////////////////////*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.our-customer {
+}
+.container {
+}
+.our-customer__container {
+    padding-top: 64px;
+    padding-bottom: 40px;
+    position: relative;
+}
+.our-customer__wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 37px;
+}
+.our-customer-title {
+    font-family: var(--accent-font);
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 27px;    
+    color: var(--text-accent-color);
+
+}
+.our-customer-btn {
+    font-family: var(--accent-font);
+    border: 2px solid transparent;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 22px;
+    color: var(--text-accent-color);
+}
+.our-customer-btn::after{
+    background-image: url(../images/blue-icon-right.svg);
+}
+.our-customer-btn:hover{
+    opacity: 0.8;
+}
+.our-customer-btn:active{
+    color: var(--bg-white-color);
+    background-color: var(--btn-color);
+}
+.our-customer-btn:active:after{
+    background-image: url(../images/white-icon-right.svg);
+}
+.our-customer__list {
+    
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+}
+.our-customer__item {
+    position: relative;
+    padding: 24px 32px 40px 32px;
+    background-color: var(--bg-white-color);
+    flex-shrink: 0;
+    width: 370px;
+    border: 1px solid #F1F1F1;
+    box-sizing: border-box;
+    border-radius: 12px;  
+    margin-bottom: 24px;  
+}
+.our-customer__item-extra{
+    margin-right: 30px;
+}
+.our-customer__text {
+    margin: 0;
+    padding: 0;
+    font-family: var(--accent-font);
+    width: 305px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 22px;  
+    color: var(--text-accent-color); 
+    margin-bottom: 24px; 
+}
+.our-customer__name {
+    margin: 0;
+    
+    text-align: center;
+}
+.our-customer__img {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    
+}
+.carousel-btn{
+    display: none;
+}
+.carousel-list{
+    overflow-x: hidden;
+}
+.carousel-item{
+    display: none;
+}
+.carousel-label{
+    display: none;
+}
+.carousel-label{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid var(--blue-color);
+    background-color: var(--text-accent-color);
+    opacity: 0.5;
+}
+.carousel-label-wrap{
+    position: absolute;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    top: calc(50% + 40px);
+    left: -5px;
+    right: -5px;
+}
+
+
+#carousel-1:checked ~ .carousel-list .carousel-item:nth-child(1),
+#carousel-1:checked ~ .carousel-list .carousel-item:nth-child(2),
+#carousel-1:checked ~ .carousel-list .carousel-item:nth-child(3),
+#carousel-1:checked ~ .carousel-label-wrap > .carousel-label:nth-of-type(12),
+#carousel-1:checked ~ .carousel-label-wrap > .carousel-label:nth-of-type(2),
+#carousel-2:checked ~ .carousel-list .carousel-item:nth-child(2),
+#carousel-2:checked ~ .carousel-list .carousel-item:nth-child(3),
+#carousel-2:checked ~ .carousel-list .carousel-item:nth-child(4),
+#carousel-2:checked ~ .carousel-label-wrap > .carousel-label:nth-of-type(1),
+#carousel-2:checked ~ .carousel-label-wrap > .carousel-label:nth-of-type(3),
+#carousel-3:checked ~ .carousel-list .carousel-item:nth-child(3),
+#carousel-3:checked ~ .carousel-list .carousel-item:nth-child(4),
+#carousel-3:checked ~ .carousel-list .carousel-item:nth-child(5),
+#carousel-3:checked ~ .carousel-label-wrap > .carousel-label:nth-of-type(2),
+#carousel-3:checked ~ .carousel-label-wrap > .carousel-label:nth-of-type(4),
+#carousel-4:checked ~ .carousel-list .carousel-item:nth-child(4),
+#carousel-4:checked ~ .carousel-list .carousel-item:nth-child(5),
+#carousel-4:checked ~ .carousel-list .carousel-item:nth-child(6),
+#carousel-4:checked ~ .carousel-label-wrap > .carousel-label:nth-of-type(3),
+#carousel-4:checked ~ .carousel-label-wrap > .carousel-label:nth-of-type(5),
+#carousel-5:checked ~ .carousel-list .carousel-item:nth-child(5),
+#carousel-5:checked ~ .carousel-list .carousel-item:nth-child(6),
+#carousel-5:checked ~ .carousel-list .carousel-item:nth-child(7),
+#carousel-5:checked ~ .carousel-label-wrap > .carousel-label:nth-of-type(4),
+#carousel-5:checked ~ .carousel-label-wrap > .carousel-label:nth-of-type(6),
+#carousel-6:checked ~ .carousel-list .carousel-item:nth-child(6),
+#carousel-6:checked ~ .carousel-list .carousel-item:nth-child(7),
+#carousel-6:checked ~ .carousel-list .carousel-item:nth-child(8),
+#carousel-6:checked ~ .carousel-label-wrap > .carousel-label:nth-of-type(5),
+#carousel-6:checked ~ .carousel-label-wrap > .carousel-label:nth-of-type(7),
+#carousel-7:checked ~ .carousel-list .carousel-item:nth-child(7),
+#carousel-7:checked ~ .carousel-list .carousel-item:nth-child(8),
+#carousel-7:checked ~ .carousel-list .carousel-item:nth-child(9),
+#carousel-7:checked ~ .carousel-label-wrap > .carousel-label:nth-of-type(6),
+#carousel-7:checked ~ .carousel-label-wrap > .carousel-label:nth-of-type(8),
+#carousel-8:checked ~ .carousel-list .carousel-item:nth-child(8),
+#carousel-8:checked ~ .carousel-list .carousel-item:nth-child(9),
+#carousel-8:checked ~ .carousel-list .carousel-item:nth-child(10),
+#carousel-8:checked ~ .carousel-label-wrap > .carousel-label:nth-of-type(7),
+#carousel-8:checked ~ .carousel-label-wrap > .carousel-label:nth-of-type(9),
+#carousel-9:checked ~ .carousel-list .carousel-item:nth-child(9),
+#carousel-9:checked ~ .carousel-list .carousel-item:nth-child(10),
+#carousel-9:checked ~ .carousel-list .carousel-item:nth-child(11),
+#carousel-9:checked ~ .carousel-label-wrap > .carousel-label:nth-of-type(8),
+#carousel-9:checked ~ .carousel-label-wrap > .carousel-label:nth-of-type(10),
+#carousel-10:checked ~ .carousel-list .carousel-item:nth-child(10),
+#carousel-10:checked ~ .carousel-list .carousel-item:nth-child(11),
+#carousel-10:checked ~ .carousel-list .carousel-item:nth-child(12),
+#carousel-10:checked ~ .carousel-label-wrap > .carousel-label:nth-of-type(9),
+#carousel-10:checked ~ .carousel-label-wrap > .carousel-label:nth-of-type(11),
+#carousel-11:checked ~ .carousel-list .carousel-item:nth-child(11),
+#carousel-11:checked ~ .carousel-list .carousel-item:nth-child(12),
+#carousel-11:checked ~ .carousel-list .carousel-item:nth-child(1),
+#carousel-11:checked ~ .carousel-label-wrap > .carousel-label:nth-of-type(10),
+#carousel-11:checked ~ .carousel-label-wrap > .carousel-label:nth-of-type(12),
+#carousel-12:checked ~ .carousel-list .carousel-item:nth-child(12),
+#carousel-12:checked ~ .carousel-list .carousel-item:nth-child(1),
+#carousel-12:checked ~ .carousel-list .carousel-item:nth-child(2),
+#carousel-12:checked ~ .carousel-label-wrap > .carousel-label:nth-of-type(11),
+#carousel-12:checked ~ .carousel-label-wrap > .carousel-label:nth-of-type(1)
+{
+    display: block;
+}
+#carousel-11:checked ~ .carousel-list .carousel-item:nth-child(11),
+#carousel-12:checked ~ .carousel-list .carousel-item:nth-child(12),
+#carousel-12:checked ~ .carousel-label-wrap > .carousel-label:nth-of-type(11),
+#carousel-1:checked ~ .carousel-label-wrap > .carousel-label:nth-of-type(12){
+    order: -1;
+}
+#carousel-11:checked ~ .carousel-list .carousel-item:nth-child(1),
+#carousel-12:checked ~ .carousel-list .carousel-item:nth-child(2),
+#carousel-12:checked ~ .carousel-label-wrap > .carousel-label:nth-of-type(1),
+#carousel-1:checked ~ .carousel-label-wrap > .carousel-label:nth-of-type(2){
+    order: 1;
+}
+
+
 
 
 /*///////////////////////////////////////// SITE FOOTER /////////////////////////////////////////////////////*/
