@@ -117,6 +117,7 @@ body{
 
 .site-header {
    background-color: var(--bg-white-color);
+   z-index: 99;
 }
 
 /*//////////////////////////////////////////////// HEADER TOP //////////////////////////////////////////////////*/
@@ -682,24 +683,29 @@ position: relative;
 .banner-btn::after{
     background-image: url(../images/blue-icon-right.svg);
 }
-.produce {
+.produce__item-extra:not(:last-child){
+    margin-right: 30px;
+}
+.produce-extra {
     flex-wrap: nowrap;
 }
+
+/*////////////////////////////////////////// PRODUCE CODE /////////////////////////////////////////////////////////*/
+
+
 .produce__list {
-    flex-grow: 1;
     margin: 0;
     padding: 0;
     list-style-type: none;
     display: flex;
 }
+
 .produce__item {
     border-radius: 12px;
     border:1px solid var(--text-accent-color4);
     padding: 16px;
 }
-.produce__item:not(:last-child){
-    margin-right: 30px;
-}
+
 .product-img {
     margin-bottom: 16px;
     margin-left: auto;
@@ -764,7 +770,7 @@ position: relative;
 
 /*///////////////////////////////// CATEGORIES SECTION RESPONSIVE////////////////////////////////////////////*/
 
-@media only screen and (max-width:921px) {
+@media only screen and (max-width:1000px) {
 
 .categories__item{
     flex-direction: column-reverse;
@@ -802,22 +808,22 @@ position: relative;
 .produce {
     flex-wrap: wrap;
 }
-.produce__list {
+.produce__list-extra {
     justify-content: space-evenly;
     flex-grow: 0;
     flex-wrap: nowrap;
     width: 100%;
 }
-.produce__item {
+.produce__item-extra {
     margin-bottom: 32px;
 }
 }
 
 @media only screen and (max-width:859px) {
-    .produce__list{
+    .produce__list-extra{
         flex-wrap: wrap;
     }
-    .produce__item:not(:last-child){
+    .produce__item-extra:not(:last-child){
         margin-right: 0;
     }
     
@@ -843,15 +849,16 @@ position: relative;
         margin-right: 0;
         margin-bottom: 24px;
     }
-    .produce__list {
+    .produce__list-extra {
         margin-bottom: 24px;
         flex-direction: column;
+        align-items: center;
     }
-   
+ 
 }
 
 @media only screen and (max-width:450px) {
-    .produce__item{
+    .produce__item-extra{
         width: 270px;
         flex-shrink: 1;
     }
@@ -859,57 +866,40 @@ position: relative;
         width: auto;
         flex-shrink: 1;
     }
-    .produce__list{
-        align-items: center;
-    }
-    
 }
 
 @media only screen and (max-width:320px){
-    .produce__item{
+    .produce__item-extra{
         width: auto;
     }
 }
 
 /*/////////////////////////////////////////////// OUR CUSTOMER SECTION //////////////////////////////////////////*/
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 .our-customer {
-}
-.container {
+    background-color: var(--bg-white-color);
 }
 .our-customer__container {
     padding-top: 64px;
     padding-bottom: 40px;
-    position: relative;
 }
-.our-customer__wrap {
+
+/*//////////////////////////////////////////////// SECTION TOP CODE ////////////////////////////////////////////////*/
+
+.section-top {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 37px;
 }
-.our-customer-title {
+.section-top-title {
     font-family: var(--accent-font);
     font-weight: 600;
     font-size: 18px;
     line-height: 27px;    
     color: var(--text-accent-color);
-
 }
-.our-customer-btn {
+.section-top-btn {
     font-family: var(--accent-font);
     border: 2px solid transparent;
     text-decoration: none;
@@ -918,21 +908,23 @@ position: relative;
     line-height: 22px;
     color: var(--text-accent-color);
 }
-.our-customer-btn::after{
+.section-top-btn::after{
     background-image: url(../images/blue-icon-right.svg);
 }
-.our-customer-btn:hover{
+.section-top-btn:hover{
     opacity: 0.8;
 }
-.our-customer-btn:active{
+.section-top-btn:active{
     color: var(--bg-white-color);
     background-color: var(--btn-color);
 }
-.our-customer-btn:active:after{
+.section-top-btn:active:after{
     background-image: url(../images/white-icon-right.svg);
 }
+
+
+
 .our-customer__list {
-    
     margin: 0;
     padding: 0;
     list-style-type: none;
@@ -975,13 +967,91 @@ position: relative;
     bottom: 0;
     left: 50%;
     transform: translate(-50%, 50%);
-    
+}
+
+/*////////////////////////////////////////////  CAROUSEL CODE //////////////////////////////////////////////////////*/
+
+#carousel-1:checked ~ .carousel-item:nth-of-type(1),
+#carousel-1:checked ~ .carousel-item:nth-of-type(2),
+#carousel-1:checked ~ .carousel-item:nth-of-type(3),
+#carousel-1:checked ~ .carousel-label-wrap > .carousel-label:nth-of-type(12),
+#carousel-1:checked ~ .carousel-label-wrap > .carousel-label:nth-of-type(2),
+#carousel-2:checked ~ .carousel-item:nth-of-type(2),
+#carousel-2:checked ~ .carousel-item:nth-of-type(3),
+#carousel-2:checked ~ .carousel-item:nth-of-type(4),
+#carousel-2:checked ~ .carousel-label-wrap > .carousel-label:nth-of-type(1),
+#carousel-2:checked ~ .carousel-label-wrap > .carousel-label:nth-of-type(3),
+#carousel-3:checked ~ .carousel-item:nth-of-type(3),
+#carousel-3:checked ~ .carousel-item:nth-of-type(4),
+#carousel-3:checked ~ .carousel-item:nth-of-type(5),
+#carousel-3:checked ~ .carousel-label-wrap > .carousel-label:nth-of-type(2),
+#carousel-3:checked ~ .carousel-label-wrap > .carousel-label:nth-of-type(4),
+#carousel-4:checked ~ .carousel-item:nth-of-type(4),
+#carousel-4:checked ~ .carousel-item:nth-of-type(5),
+#carousel-4:checked ~ .carousel-item:nth-of-type(6),
+#carousel-4:checked ~ .carousel-label-wrap > .carousel-label:nth-of-type(3),
+#carousel-4:checked ~ .carousel-label-wrap > .carousel-label:nth-of-type(5),
+#carousel-5:checked ~ .carousel-item:nth-of-type(5),
+#carousel-5:checked ~ .carousel-item:nth-of-type(6),
+#carousel-5:checked ~ .carousel-item:nth-of-type(7),
+#carousel-5:checked ~ .carousel-label-wrap > .carousel-label:nth-of-type(4),
+#carousel-5:checked ~ .carousel-label-wrap > .carousel-label:nth-of-type(6),
+#carousel-6:checked ~ .carousel-item:nth-of-type(6),
+#carousel-6:checked ~ .carousel-item:nth-of-type(7),
+#carousel-6:checked ~ .carousel-item:nth-of-type(8),
+#carousel-6:checked ~ .carousel-label-wrap > .carousel-label:nth-of-type(5),
+#carousel-6:checked ~ .carousel-label-wrap > .carousel-label:nth-of-type(7),
+#carousel-7:checked ~ .carousel-item:nth-of-type(7),
+#carousel-7:checked ~ .carousel-item:nth-of-type(8),
+#carousel-7:checked ~ .carousel-item:nth-of-type(9),
+#carousel-7:checked ~ .carousel-label-wrap > .carousel-label:nth-of-type(6),
+#carousel-7:checked ~ .carousel-label-wrap > .carousel-label:nth-of-type(8),
+#carousel-8:checked ~ .carousel-item:nth-of-type(8),
+#carousel-8:checked ~ .carousel-item:nth-of-type(9),
+#carousel-8:checked ~ .carousel-item:nth-of-type(10),
+#carousel-8:checked ~ .carousel-label-wrap > .carousel-label:nth-of-type(7),
+#carousel-8:checked ~ .carousel-label-wrap > .carousel-label:nth-of-type(9),
+#carousel-9:checked ~ .carousel-item:nth-of-type(9),
+#carousel-9:checked ~ .carousel-item:nth-of-type(10),
+#carousel-9:checked ~ .carousel-item:nth-of-type(11),
+#carousel-9:checked ~ .carousel-label-wrap > .carousel-label:nth-of-type(8),
+#carousel-9:checked ~ .carousel-label-wrap > .carousel-label:nth-of-type(10),
+#carousel-10:checked ~ .carousel-item:nth-of-type(10),
+#carousel-10:checked ~ .carousel-item:nth-of-type(11),
+#carousel-10:checked ~ .carousel-item:nth-of-type(12),
+#carousel-10:checked ~ .carousel-label-wrap > .carousel-label:nth-of-type(9),
+#carousel-10:checked ~ .carousel-label-wrap > .carousel-label:nth-of-type(11),
+#carousel-11:checked ~ .carousel-item:nth-of-type(11),
+#carousel-11:checked ~ .carousel-item:nth-of-type(12),
+#carousel-11:checked ~ .carousel-item:nth-of-type(1),
+#carousel-11:checked ~ .carousel-label-wrap > .carousel-label:nth-of-type(10),
+#carousel-11:checked ~ .carousel-label-wrap > .carousel-label:nth-of-type(12),
+#carousel-12:checked ~ .carousel-item:nth-of-type(12),
+#carousel-12:checked ~ .carousel-item:nth-of-type(1),
+#carousel-12:checked ~ .carousel-item:nth-of-type(2),
+#carousel-12:checked ~ .carousel-label-wrap > .carousel-label:nth-of-type(11),
+#carousel-12:checked ~ .carousel-label-wrap > .carousel-label:nth-of-type(1)
+{
+    display: block;
+}
+#carousel-11:checked ~ .carousel-item:nth-of-type(11),
+#carousel-12:checked ~ .carousel-item:nth-of-type(12),
+#carousel-12:checked ~ .carousel-label-wrap > .carousel-label:nth-of-type(11),
+#carousel-1:checked ~ .carousel-label-wrap > .carousel-label:nth-of-type(12){
+    order: -1;
+}
+#carousel-11:checked ~ .carousel-item:nth-of-type(1),
+#carousel-12:checked ~ .carousel-item:nth-of-type(2),
+#carousel-12:checked ~ .carousel-label-wrap > .carousel-label:nth-of-type(1),
+#carousel-1:checked ~ .carousel-label-wrap > .carousel-label:nth-of-type(2){
+    order: 1;
 }
 .carousel-btn{
     display: none;
 }
 .carousel-list{
     overflow-x: hidden;
+    position: relative;
 }
 .carousel-item{
     display: none;
@@ -999,94 +1069,50 @@ position: relative;
 }
 .carousel-label-wrap{
     position: absolute;
-    z-index: 99;
+    z-index: 1;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    top: calc(50% + 40px);
-    left: -5px;
-    right: -5px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 4px;
+    right: 4px;
 }
 
+/*//////////////////////////////////////// PRODUCE SECTION ////////////////////////////////////////////*/
 
-#carousel-1:checked ~ .carousel-list .carousel-item:nth-child(1),
-#carousel-1:checked ~ .carousel-list .carousel-item:nth-child(2),
-#carousel-1:checked ~ .carousel-list .carousel-item:nth-child(3),
-#carousel-1:checked ~ .carousel-label-wrap > .carousel-label:nth-of-type(12),
-#carousel-1:checked ~ .carousel-label-wrap > .carousel-label:nth-of-type(2),
-#carousel-2:checked ~ .carousel-list .carousel-item:nth-child(2),
-#carousel-2:checked ~ .carousel-list .carousel-item:nth-child(3),
-#carousel-2:checked ~ .carousel-list .carousel-item:nth-child(4),
-#carousel-2:checked ~ .carousel-label-wrap > .carousel-label:nth-of-type(1),
-#carousel-2:checked ~ .carousel-label-wrap > .carousel-label:nth-of-type(3),
-#carousel-3:checked ~ .carousel-list .carousel-item:nth-child(3),
-#carousel-3:checked ~ .carousel-list .carousel-item:nth-child(4),
-#carousel-3:checked ~ .carousel-list .carousel-item:nth-child(5),
-#carousel-3:checked ~ .carousel-label-wrap > .carousel-label:nth-of-type(2),
-#carousel-3:checked ~ .carousel-label-wrap > .carousel-label:nth-of-type(4),
-#carousel-4:checked ~ .carousel-list .carousel-item:nth-child(4),
-#carousel-4:checked ~ .carousel-list .carousel-item:nth-child(5),
-#carousel-4:checked ~ .carousel-list .carousel-item:nth-child(6),
-#carousel-4:checked ~ .carousel-label-wrap > .carousel-label:nth-of-type(3),
-#carousel-4:checked ~ .carousel-label-wrap > .carousel-label:nth-of-type(5),
-#carousel-5:checked ~ .carousel-list .carousel-item:nth-child(5),
-#carousel-5:checked ~ .carousel-list .carousel-item:nth-child(6),
-#carousel-5:checked ~ .carousel-list .carousel-item:nth-child(7),
-#carousel-5:checked ~ .carousel-label-wrap > .carousel-label:nth-of-type(4),
-#carousel-5:checked ~ .carousel-label-wrap > .carousel-label:nth-of-type(6),
-#carousel-6:checked ~ .carousel-list .carousel-item:nth-child(6),
-#carousel-6:checked ~ .carousel-list .carousel-item:nth-child(7),
-#carousel-6:checked ~ .carousel-list .carousel-item:nth-child(8),
-#carousel-6:checked ~ .carousel-label-wrap > .carousel-label:nth-of-type(5),
-#carousel-6:checked ~ .carousel-label-wrap > .carousel-label:nth-of-type(7),
-#carousel-7:checked ~ .carousel-list .carousel-item:nth-child(7),
-#carousel-7:checked ~ .carousel-list .carousel-item:nth-child(8),
-#carousel-7:checked ~ .carousel-list .carousel-item:nth-child(9),
-#carousel-7:checked ~ .carousel-label-wrap > .carousel-label:nth-of-type(6),
-#carousel-7:checked ~ .carousel-label-wrap > .carousel-label:nth-of-type(8),
-#carousel-8:checked ~ .carousel-list .carousel-item:nth-child(8),
-#carousel-8:checked ~ .carousel-list .carousel-item:nth-child(9),
-#carousel-8:checked ~ .carousel-list .carousel-item:nth-child(10),
-#carousel-8:checked ~ .carousel-label-wrap > .carousel-label:nth-of-type(7),
-#carousel-8:checked ~ .carousel-label-wrap > .carousel-label:nth-of-type(9),
-#carousel-9:checked ~ .carousel-list .carousel-item:nth-child(9),
-#carousel-9:checked ~ .carousel-list .carousel-item:nth-child(10),
-#carousel-9:checked ~ .carousel-list .carousel-item:nth-child(11),
-#carousel-9:checked ~ .carousel-label-wrap > .carousel-label:nth-of-type(8),
-#carousel-9:checked ~ .carousel-label-wrap > .carousel-label:nth-of-type(10),
-#carousel-10:checked ~ .carousel-list .carousel-item:nth-child(10),
-#carousel-10:checked ~ .carousel-list .carousel-item:nth-child(11),
-#carousel-10:checked ~ .carousel-list .carousel-item:nth-child(12),
-#carousel-10:checked ~ .carousel-label-wrap > .carousel-label:nth-of-type(9),
-#carousel-10:checked ~ .carousel-label-wrap > .carousel-label:nth-of-type(11),
-#carousel-11:checked ~ .carousel-list .carousel-item:nth-child(11),
-#carousel-11:checked ~ .carousel-list .carousel-item:nth-child(12),
-#carousel-11:checked ~ .carousel-list .carousel-item:nth-child(1),
-#carousel-11:checked ~ .carousel-label-wrap > .carousel-label:nth-of-type(10),
-#carousel-11:checked ~ .carousel-label-wrap > .carousel-label:nth-of-type(12),
-#carousel-12:checked ~ .carousel-list .carousel-item:nth-child(12),
-#carousel-12:checked ~ .carousel-list .carousel-item:nth-child(1),
-#carousel-12:checked ~ .carousel-list .carousel-item:nth-child(2),
-#carousel-12:checked ~ .carousel-label-wrap > .carousel-label:nth-of-type(11),
-#carousel-12:checked ~ .carousel-label-wrap > .carousel-label:nth-of-type(1)
-{
-    display: block;
+.produce__list-container {
+    display: flex;
 }
-#carousel-11:checked ~ .carousel-list .carousel-item:nth-child(11),
-#carousel-12:checked ~ .carousel-list .carousel-item:nth-child(12),
-#carousel-12:checked ~ .carousel-label-wrap > .carousel-label:nth-of-type(11),
-#carousel-1:checked ~ .carousel-label-wrap > .carousel-label:nth-of-type(12){
-    order: -1;
+.produce__list-wrap {
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
 }
-#carousel-11:checked ~ .carousel-list .carousel-item:nth-child(1),
-#carousel-12:checked ~ .carousel-list .carousel-item:nth-child(2),
-#carousel-12:checked ~ .carousel-label-wrap > .carousel-label:nth-of-type(1),
-#carousel-1:checked ~ .carousel-label-wrap > .carousel-label:nth-of-type(2){
-    order: 1;
+.produce__item {
+    margin-bottom: 30px;
+    flex-shrink: 1;
 }
 
-
-
+@media only screen and (max-width:1200px) {
+    .produce__list-container{
+        flex-direction: column;
+    }
+    .produce__list-wrap{
+        width: 100%;
+        
+        justify-content: space-evenly;
+    }
+}
+@media only screen and (max-width:680px){
+    .produce__list-wrap{
+        flex-direction: column;
+        align-items: center;
+    }
+    .produce__item{
+        width: 270px;
+    }
+}
 
 /*///////////////////////////////////////// SITE FOOTER /////////////////////////////////////////////////////*/
 
