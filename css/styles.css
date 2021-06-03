@@ -884,46 +884,6 @@ position: relative;
     padding-bottom: 40px;
 }
 
-/*//////////////////////////////////////////////// SECTION TOP CODE ////////////////////////////////////////////////*/
-
-.section-top {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 37px;
-}
-.section-top-title {
-    font-family: var(--accent-font);
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 27px;    
-    color: var(--text-accent-color);
-}
-.section-top-btn {
-    font-family: var(--accent-font);
-    border: 2px solid transparent;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 15px;
-    line-height: 22px;
-    color: var(--text-accent-color);
-}
-.section-top-btn::after{
-    background-image: url(../images/blue-icon-right.svg);
-}
-.section-top-btn:hover{
-    opacity: 0.8;
-}
-.section-top-btn:active{
-    color: var(--bg-white-color);
-    background-color: var(--btn-color);
-}
-.section-top-btn:active:after{
-    background-image: url(../images/white-icon-right.svg);
-}
-
-
-
 .our-customer__list {
     margin: 0;
     padding: 0;
@@ -969,79 +929,121 @@ position: relative;
     transform: translate(-50%, 50%);
 }
 
+/*//////////////////////////////////////////////// SECTION TOP CODE ////////////////////////////////////////////////*/
+
+.section-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 37px;
+}
+.section-top-title {
+    font-family: var(--accent-font);
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 27px;    
+    color: var(--text-accent-color);
+}
+.section-top-btn {
+    font-family: var(--accent-font);
+    border: 2px solid transparent;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 22px;
+    color: var(--text-accent-color);
+}
+.section-top-btn::after{
+    background-image: url(../images/blue-icon-right.svg);
+}
+.section-top-btn:hover{
+    opacity: 0.8;
+}
+.section-top-btn:active{
+    color: var(--bg-white-color);
+    background-color: var(--btn-color);
+}
+.section-top-btn:active:after{
+    background-image: url(../images/white-icon-right.svg);
+}
+
+
+
+
+
 /*////////////////////////////////////////////  CAROUSEL CODE //////////////////////////////////////////////////////*/
 
-#carousel-1:checked ~ .carousel-item:nth-of-type(1),
-#carousel-1:checked ~ .carousel-item:nth-of-type(2),
-#carousel-1:checked ~ .carousel-item:nth-of-type(3),
+#carousel-1:checked ~ .carousel-list .carousel-item:nth-of-type(1),
+#carousel-1:checked ~ .carousel-list .carousel-item:nth-of-type(2),
+#carousel-1:checked ~ .carousel-list .carousel-item:nth-of-type(3),
 #carousel-1:checked ~ .carousel-label-wrap > .carousel-label:nth-of-type(12),
 #carousel-1:checked ~ .carousel-label-wrap > .carousel-label:nth-of-type(2),
-#carousel-2:checked ~ .carousel-item:nth-of-type(2),
-#carousel-2:checked ~ .carousel-item:nth-of-type(3),
-#carousel-2:checked ~ .carousel-item:nth-of-type(4),
+#carousel-2:checked ~ .carousel-list .carousel-item:nth-of-type(2),
+#carousel-2:checked ~ .carousel-list .carousel-item:nth-of-type(3),
+#carousel-2:checked ~ .carousel-list .carousel-item:nth-of-type(4),
 #carousel-2:checked ~ .carousel-label-wrap > .carousel-label:nth-of-type(1),
 #carousel-2:checked ~ .carousel-label-wrap > .carousel-label:nth-of-type(3),
-#carousel-3:checked ~ .carousel-item:nth-of-type(3),
-#carousel-3:checked ~ .carousel-item:nth-of-type(4),
-#carousel-3:checked ~ .carousel-item:nth-of-type(5),
+#carousel-3:checked ~ .carousel-list .carousel-item:nth-of-type(3),
+#carousel-3:checked ~ .carousel-list .carousel-item:nth-of-type(4),
+#carousel-3:checked ~ .carousel-list .carousel-item:nth-of-type(5),
 #carousel-3:checked ~ .carousel-label-wrap > .carousel-label:nth-of-type(2),
 #carousel-3:checked ~ .carousel-label-wrap > .carousel-label:nth-of-type(4),
-#carousel-4:checked ~ .carousel-item:nth-of-type(4),
-#carousel-4:checked ~ .carousel-item:nth-of-type(5),
-#carousel-4:checked ~ .carousel-item:nth-of-type(6),
+#carousel-4:checked ~ .carousel-list .carousel-item:nth-of-type(4),
+#carousel-4:checked ~ .carousel-list .carousel-item:nth-of-type(5),
+#carousel-4:checked ~ .carousel-list .carousel-item:nth-of-type(6),
 #carousel-4:checked ~ .carousel-label-wrap > .carousel-label:nth-of-type(3),
 #carousel-4:checked ~ .carousel-label-wrap > .carousel-label:nth-of-type(5),
-#carousel-5:checked ~ .carousel-item:nth-of-type(5),
-#carousel-5:checked ~ .carousel-item:nth-of-type(6),
-#carousel-5:checked ~ .carousel-item:nth-of-type(7),
+#carousel-5:checked ~ .carousel-list .carousel-item:nth-of-type(5),
+#carousel-5:checked ~ .carousel-list .carousel-item:nth-of-type(6),
+#carousel-5:checked ~ .carousel-list .carousel-item:nth-of-type(7),
 #carousel-5:checked ~ .carousel-label-wrap > .carousel-label:nth-of-type(4),
 #carousel-5:checked ~ .carousel-label-wrap > .carousel-label:nth-of-type(6),
-#carousel-6:checked ~ .carousel-item:nth-of-type(6),
-#carousel-6:checked ~ .carousel-item:nth-of-type(7),
-#carousel-6:checked ~ .carousel-item:nth-of-type(8),
+#carousel-6:checked ~ .carousel-list .carousel-item:nth-of-type(6),
+#carousel-6:checked ~ .carousel-list .carousel-item:nth-of-type(7),
+#carousel-6:checked ~ .carousel-list .carousel-item:nth-of-type(8),
 #carousel-6:checked ~ .carousel-label-wrap > .carousel-label:nth-of-type(5),
 #carousel-6:checked ~ .carousel-label-wrap > .carousel-label:nth-of-type(7),
-#carousel-7:checked ~ .carousel-item:nth-of-type(7),
-#carousel-7:checked ~ .carousel-item:nth-of-type(8),
-#carousel-7:checked ~ .carousel-item:nth-of-type(9),
+#carousel-7:checked ~ .carousel-list .carousel-item:nth-of-type(7),
+#carousel-7:checked ~ .carousel-list .carousel-item:nth-of-type(8),
+#carousel-7:checked ~ .carousel-list .carousel-item:nth-of-type(9),
 #carousel-7:checked ~ .carousel-label-wrap > .carousel-label:nth-of-type(6),
 #carousel-7:checked ~ .carousel-label-wrap > .carousel-label:nth-of-type(8),
-#carousel-8:checked ~ .carousel-item:nth-of-type(8),
-#carousel-8:checked ~ .carousel-item:nth-of-type(9),
-#carousel-8:checked ~ .carousel-item:nth-of-type(10),
+#carousel-8:checked ~ .carousel-list .carousel-item:nth-of-type(8),
+#carousel-8:checked ~ .carousel-list .carousel-item:nth-of-type(9),
+#carousel-8:checked ~ .carousel-list .carousel-item:nth-of-type(10),
 #carousel-8:checked ~ .carousel-label-wrap > .carousel-label:nth-of-type(7),
 #carousel-8:checked ~ .carousel-label-wrap > .carousel-label:nth-of-type(9),
-#carousel-9:checked ~ .carousel-item:nth-of-type(9),
-#carousel-9:checked ~ .carousel-item:nth-of-type(10),
-#carousel-9:checked ~ .carousel-item:nth-of-type(11),
+#carousel-9:checked ~ .carousel-list .carousel-item:nth-of-type(9),
+#carousel-9:checked ~ .carousel-list .carousel-item:nth-of-type(10),
+#carousel-9:checked ~ .carousel-list .carousel-item:nth-of-type(11),
 #carousel-9:checked ~ .carousel-label-wrap > .carousel-label:nth-of-type(8),
 #carousel-9:checked ~ .carousel-label-wrap > .carousel-label:nth-of-type(10),
-#carousel-10:checked ~ .carousel-item:nth-of-type(10),
-#carousel-10:checked ~ .carousel-item:nth-of-type(11),
-#carousel-10:checked ~ .carousel-item:nth-of-type(12),
+#carousel-10:checked ~ .carousel-list .carousel-item:nth-of-type(10),
+#carousel-10:checked ~ .carousel-list .carousel-item:nth-of-type(11),
+#carousel-10:checked ~ .carousel-list .carousel-item:nth-of-type(12),
 #carousel-10:checked ~ .carousel-label-wrap > .carousel-label:nth-of-type(9),
 #carousel-10:checked ~ .carousel-label-wrap > .carousel-label:nth-of-type(11),
-#carousel-11:checked ~ .carousel-item:nth-of-type(11),
-#carousel-11:checked ~ .carousel-item:nth-of-type(12),
-#carousel-11:checked ~ .carousel-item:nth-of-type(1),
+#carousel-11:checked ~ .carousel-list .carousel-item:nth-of-type(11),
+#carousel-11:checked ~ .carousel-list .carousel-item:nth-of-type(12),
+#carousel-11:checked ~ .carousel-list .carousel-item:nth-of-type(1),
 #carousel-11:checked ~ .carousel-label-wrap > .carousel-label:nth-of-type(10),
 #carousel-11:checked ~ .carousel-label-wrap > .carousel-label:nth-of-type(12),
-#carousel-12:checked ~ .carousel-item:nth-of-type(12),
-#carousel-12:checked ~ .carousel-item:nth-of-type(1),
-#carousel-12:checked ~ .carousel-item:nth-of-type(2),
+#carousel-12:checked ~ .carousel-list .carousel-item:nth-of-type(12),
+#carousel-12:checked ~ .carousel-list .carousel-item:nth-of-type(1),
+#carousel-12:checked ~ .carousel-list .carousel-item:nth-of-type(2),
 #carousel-12:checked ~ .carousel-label-wrap > .carousel-label:nth-of-type(11),
 #carousel-12:checked ~ .carousel-label-wrap > .carousel-label:nth-of-type(1)
 {
     display: block;
 }
-#carousel-11:checked ~ .carousel-item:nth-of-type(11),
-#carousel-12:checked ~ .carousel-item:nth-of-type(12),
+#carousel-11:checked ~ .carousel-list .carousel-item:nth-of-type(11),
+#carousel-12:checked ~ .carousel-list .carousel-item:nth-of-type(12),
 #carousel-12:checked ~ .carousel-label-wrap > .carousel-label:nth-of-type(11),
 #carousel-1:checked ~ .carousel-label-wrap > .carousel-label:nth-of-type(12){
     order: -1;
 }
-#carousel-11:checked ~ .carousel-item:nth-of-type(1),
-#carousel-12:checked ~ .carousel-item:nth-of-type(2),
+#carousel-11:checked ~ .carousel-list .carousel-item:nth-of-type(1),
+#carousel-12:checked ~ .carousel-list .carousel-item:nth-of-type(2),
 #carousel-12:checked ~ .carousel-label-wrap > .carousel-label:nth-of-type(1),
 #carousel-1:checked ~ .carousel-label-wrap > .carousel-label:nth-of-type(2){
     order: 1;
@@ -1049,9 +1051,12 @@ position: relative;
 .carousel-btn{
     display: none;
 }
+.carousel-wrap{
+    position: relative;
+}
 .carousel-list{
     overflow-x: hidden;
-    position: relative;
+   
 }
 .carousel-item{
     display: none;
@@ -1089,10 +1094,12 @@ position: relative;
     width: 50%;
     justify-content: space-around;
 }
-.produce__item {
+.produce__item-section {
     margin-bottom: 30px;
     flex-shrink: 1;
 }
+
+/*////////////////////////////////// PRODUCE SECTION RESPONSIVE ////////////////////////////////////////////*/
 
 @media only screen and (max-width:1200px) {
     .produce__list-container{
@@ -1109,8 +1116,188 @@ position: relative;
         flex-direction: column;
         align-items: center;
     }
-    .produce__item{
+    .produce__item-section{
         width: 270px;
+    }
+}
+
+/*/////////////////////////////////////// OUR DISH SECTION //////////////////////////////////////////////////*/
+
+.our-dish {
+    padding-top: 64px;
+    padding-bottom: 64px;
+}
+.our-dish__container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+/*  */
+.dish-wrap {
+    padding: 24px;
+    border-radius: 12px;
+    background-image: url(../images/dish-img1.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: var(--bg-white-color);
+    margin-right: 30px;
+}
+.dish-tag {
+    font-family: var(--accent-font);
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 18px;  
+    background-color: var(--bg-white-color);
+    padding: 0 8px;
+    margin: 0;
+    border-radius: 9px;
+    color: var(--btn-color);
+}
+.dish-about {
+    max-width: 380px;
+    font-family: var(--accent-font);
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 33px;
+    margin: 0;
+    margin-top: 228px;
+    margin-bottom: 8px;    
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 33px;
+}
+.dish-bootom {
+    display: flex;
+    font-size: 12px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+}
+.dish-bottom__extra::before{
+    display: block;
+    content: "";
+    width: 32px;
+    height: 32px;
+    background-image: url(../images/Ellipse\ 3.jpg);
+    background-color: transparent;
+    background-position: center center;
+    background-size: 32px 32px;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+.dish-bottom__author {
+    margin-right: 16px;    
+}
+.dishes-list {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+}
+.dishes-list__extra {
+    margin-right: 30px;
+}
+.dishes-item {
+    max-width: 269px;
+
+}
+.dishes-img {
+    margin-bottom: 24px;
+}
+.dishes-tag {
+    font-family: var(--accent-font);
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 18px;  
+    background-color: var(--bg-white-color);
+    padding: 0 8px;
+    margin: 0;
+    margin-bottom: 8px;
+    border-radius: 9px;
+    color: var(--btn-color);
+}
+.dishes-about {
+    margin: 0;
+    padding: 0;
+    font-family: var(--accent-font);
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 27px; 
+    color: var(--text-accent-color);   
+    margin-top: 8px;
+    margin-bottom: 16px;
+}
+.dish-bottom {
+    color: var(--text-accent-color);
+}
+.dish-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+.dish-list__extra {
+    flex-grow: 1;
+}
+.dish-item {
+    display: flex;
+    justify-content: space-between;
+
+}
+.dish-item__extra:not(:last-child) {
+    margin-bottom: 32px;
+}
+.dish__wrap {
+    margin-right: 30px;
+
+}
+.dish__about {
+    font-family: var(--accent-font);
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 22px;    
+    color: var(--text-accent-color);
+    max-width: 225px;
+    margin: 0;
+    margin-bottom: 16px;
+}
+
+/*//////////////////////////////////// OUR DISH RESPONSIVE ///////////////////////////////////////////////////*/
+
+@media only screen and (max-width:1016px) {
+    .our-dish__container{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .dish-wrap{
+        margin-left: 135px;
+        margin-right: 135px;     
+        margin-bottom: 30px;                                                           
+    }
+    .dishes-list__extra {
+        margin-right: auto;
+    }
+    .dish-list__extra {
+        flex-grow: 0;
+    }
+}
+
+@media only screen and (max-width:746px){
+    .dishes-list__extra{
+        margin-right: 0;
+    }
+    .dish-wrap{
+        margin-left: 0;
+        margin-right: 0;
+        flex-shrink: 1;
+    }
+}
+@media only screen and (max-width:700px){
+    .our-dish__container{
+        flex-direction: column;
+        align-items: center;
     }
 }
 
