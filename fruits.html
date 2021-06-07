@@ -195,10 +195,9 @@
         </div>
     </section>
 
-    <div class="container">
+    <div class="container view-wrap">
         <form class="left-form" action="#" method="POST" 
         oninput="priceminoutput.value=pricemin.value, pricemaxoutput.value=pricemax.value">
-
             <div class="left-form__wrap">
                 <h2 class="left-form__title">Categories</h2>
                 <label for="left-form__radio1" class="left-form__label left-form__category-label">
@@ -246,23 +245,23 @@
             <div class="left-form__wrap">
                 <h2 class="left-form__title">Rating</h2>
                 <label class="left-form__label" for="left-form__rating-check1">
-                    <input class="rating__check" type="checkbox" name="brand-label" id="left-form__rating-check1">
+                    <input class="rating__check" type="checkbox" name="rating-label" id="left-form__rating-check1">
                     <img class="rating__img" src="images/rating-img1.png" alt="rating-img" width="88" height="16">
                 </label>
                 <label class="left-form__label" for="left-form__rating-check2">
-                    <input class="rating__check" type="checkbox" name="brand-label" id="left-form__rating-check2">
+                    <input class="rating__check" type="checkbox" name="rating-label" id="left-form__rating-check2">
                     <img class="rating__img" src="images/rating-img2.png" alt="rating-img" width="88" height="16">
                 </label>
                 <label class="left-form__label" for="left-form__rating-check3">
-                    <input class="rating__check" type="checkbox" name="brand-label" id="left-form__rating-check3">
+                    <input class="rating__check" type="checkbox" name="rating-label" id="left-form__rating-check3">
                     <img class="rating__img" src="images/rating-img3.png" alt="rating-img" width="88" height="16">
                 </label>
                 <label class="left-form__label" for="left-form__rating-check4">
-                    <input class="rating__check" type="checkbox" name="brand-label" id="left-form__rating-check4">
+                    <input class="rating__check" type="checkbox" name="rating-label" id="left-form__rating-check4">
                     <img class="rating__img" src="images/rating-img4.png" alt="rating-img" width="88" height="16">
                 </label>
                 <label class="left-form__label" for="left-form__rating-check5">
-                    <input class="rating__check" type="checkbox" name="brand-label" id="left-form__rating-check5">
+                    <input class="rating__check" type="checkbox" name="rating-label" id="left-form__rating-check5">
                     <img class="rating__img" src="images/rating-img5.png" alt="rating-img" width="88" height="16">
                 </label>        
             </div>
@@ -273,7 +272,7 @@
                     <label class="left-form__label" for="pricemin">
                         <input class="left-form__range" type="range" id="pricemin" name="pricemin" min="1" max="100" step="1" value="0">
                     </label>
-                    <label for="pricemax">
+                    <label for="pricemax" class="left-form__label">
                         <input class="left-form__range" type="range" id="pricemax" name="pricemax" min="1" max="100" step="1" value="100">
                     </label>
                 </div>
@@ -293,6 +292,117 @@
                 </div>
             </div>
         </form>
+             
+        <ul class="produce__list fruits-produce__wrap">
+            <li class="produce__item friuts-produce__item">
+                <img class="product-img" src="images/bg-fon.png" alt="produce-img" width="236" height="180" >
+                <h3 class="produce__title">Product Title</h3>
+                <p class="produce__text">Space for a small product description </p>
+                <div class="buy-wrapper">
+                    <div class="buy-wrap">
+                        <span class="buy-amount">1.48 USD</span>
+                        <del class="buy-del">48.56</del>
+                    </div>
+                    <button class="buy-btn">Buy now</button>
+                </div>
+            </li>
+            <li class="produce__item friuts-produce__item">
+                <img class="product-img" src="images/bg-fon.png" alt="produce-img" width="236" height="180" >
+                <h3 class="produce__title">Product Title</h3>
+                <p class="produce__text">Space for a small product description </p>
+                <div class="buy-wrapper">
+                    <div class="buy-wrap">
+                        <span class="buy-amount">1.48 USD</span>
+                        <del class="buy-del">48.56</del>
+                    </div>
+                    <button class="buy-btn">Buy now</button>
+                </div>
+            </li>
+            <li class="produce__item friuts-produce__item">
+                <img class="product-img" src="images/bg-fon.png" alt="produce-img" width="236" height="180" >
+                <h3 class="produce__title">Product Title</h3>
+                <p class="produce__text">Space for a small product description </p>
+                <div class="buy-wrapper">
+                    <div class="buy-wrap">
+                        <span class="buy-amount">1.48 USD</span>
+                        <del class="buy-del">48.56</del>
+                    </div>
+                    <button class="buy-btn">Buy now</button>
+                </div>
+            </li>
+            <li class="produce__item friuts-produce__item">
+                <img class="product-img" src="images/bg-fon.png" alt="produce-img" width="236" height="180" >
+                <h3 class="produce__title">Product Title</h3>
+                <p class="produce__text">Space for a small product description </p>
+                <div class="buy-wrapper">
+                    <div class="buy-wrap">
+                        <span class="buy-amount">1.48 USD</span>
+                        <del class="buy-del">48.56</del>
+                    </div>
+                    <button class="buy-btn">Buy now</button>
+                </div>
+            </li>
+            <li class="produce__item friuts-produce__item">
+                <img class="product-img" src="images/bg-fon.png" alt="produce-img" width="236" height="180" >
+                <h3 class="produce__title">Product Title</h3>
+                <p class="produce__text">Space for a small product description </p>
+                <div class="buy-wrapper">
+                    <div class="buy-wrap">
+                        <span class="buy-amount">1.48 USD</span>
+                        <del class="buy-del">48.56</del>
+                    </div>
+                    <button class="buy-btn">Buy now</button>
+                </div>
+            </li>
+            <li class="produce__item friuts-produce__item">
+                <img class="product-img" src="images/bg-fon.png" alt="produce-img" width="236" height="180" >
+                <h3 class="produce__title">Product Title</h3>
+                <p class="produce__text">Space for a small product description </p>
+                <div class="buy-wrapper">
+                    <div class="buy-wrap">
+                        <span class="buy-amount">1.48 USD</span>
+                        <del class="buy-del">48.56</del>
+                    </div>
+                    <button class="buy-btn">Buy now</button>
+                </div>
+            </li>
+            <li class="produce__item friuts-produce__item">
+                <img class="product-img" src="images/bg-fon.png" alt="produce-img" width="236" height="180" >
+                <h3 class="produce__title">Product Title</h3>
+                <p class="produce__text">Space for a small product description </p>
+                <div class="buy-wrapper">
+                    <div class="buy-wrap">
+                        <span class="buy-amount">1.48 USD</span>
+                        <del class="buy-del">48.56</del>
+                    </div>
+                    <button class="buy-btn">Buy now</button>
+                </div>
+            </li>
+            <li class="produce__item friuts-produce__item">
+                <img class="product-img" src="images/bg-fon.png" alt="produce-img" width="236" height="180" >
+                <h3 class="produce__title">Product Title</h3>
+                <p class="produce__text">Space for a small product description </p>
+                <div class="buy-wrapper">
+                    <div class="buy-wrap">
+                        <span class="buy-amount">1.48 USD</span>
+                        <del class="buy-del">48.56</del>
+                    </div>
+                    <button class="buy-btn">Buy now</button>
+                </div>
+            </li>
+            <li class="produce__item friuts-produce__item">
+                <img class="product-img" src="images/bg-fon.png" alt="produce-img" width="236" height="180" >
+                <h3 class="produce__title">Product Title</h3>
+                <p class="produce__text">Space for a small product description </p>
+                <div class="buy-wrapper">
+                    <div class="buy-wrap">
+                        <span class="buy-amount">1.48 USD</span>
+                        <del class="buy-del">48.56</del>
+                    </div>
+                    <button class="buy-btn">Buy now</button>
+                </div>
+            </li>
+        </ul>  
     </div>
 
    </main>

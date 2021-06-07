@@ -1337,15 +1337,15 @@ position: relative;
     padding-bottom: 8px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 }
 .fruits-header__title {
     font-family: var(--accent-font);
     font-weight: 600;
     font-size: 32px;
     line-height: 48px; 
-    color: var(--text-accent-color);   
-    margin-right: auto;
+    color: var(--text-accent-color); 
+    margin: 0;  margin-right: 30px;
 }
 .fruits-header__list {
     display: flex;
@@ -1354,7 +1354,6 @@ position: relative;
     padding: 0;
     list-style-type: none;
 }
-
 .fruits-header__item{
     display: flex;
     align-items: center;
@@ -1390,63 +1389,6 @@ position: relative;
     border: none;
     background-color: transparent;
     color: var(--text-accent-color3);
-}
-
-/*///////////////////////////////////////// SITE FOOTER /////////////////////////////////////////////////////*/
-
-.site-footer {
-    background-color: var(--bg-white-color);
-    padding-top: 64px;
-    padding-bottom: 64px;
-}
-
-/* FOOTER TOP */
-
-.footer-top {
-    display: block;
-}
-.footer-top__container{
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    padding-bottom: 48px;
-}
-.footer-top__wrap{
-    display: flex;
-    align-items: flex-start;
-    width: 50%;
-    justify-content: space-between;
-}
-.footer-top__wrap section{
-    width: 50%;
-    flex-shrink: 0;
-}
-.footer-top__title {
-    font-family: var(--accent-font);
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 27px;
-    margin-top: 0;
-    color: var(--text-accent-color);
-    white-space: nowrap;
-}
-.footer-top__list {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-}
-.footer-top__item:not(:last-child) {
-    margin-bottom: 16px;
-}
-.footer-top__link {
-    text-decoration: none;
-    color: var(--btn-color);
-    font-size: 14px;
-    line-height: 19px;
-}
-.footer-top__link:hover{
-    color: var(--btn-color2);
 }
 
 /*/////////////////////////////////////////////// FRUITS MAIN ////////////////////////////////////////////////////////*/
@@ -1531,10 +1473,10 @@ position: relative;
     line-height: 18px;    
     color: var(--text-accent-color);
 }
-
 .applied-wrap {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     font-family: var(--accent-font);
     font-weight: 600;
     font-size: 12px;
@@ -1569,10 +1511,51 @@ position: relative;
     margin-right: 12px;
 }
 
+/*/////////////////////////////////// SITE TOP AND FRUITS HEADER RESPONSIVE /////////////////////////////////*/
+
+@media only screen and (max-width:913px){
+    .fruits-form__wrap{
+        margin-bottom: 16px;
+    }
+    .fruits-main {
+        padding-bottom: 0;
+    }
+}
+@media only screen and (max-width:750px) {
+    .fruits-header__top{
+        flex-direction: column;
+        align-items: center;
+    }
+    .fruits-header__title {
+        margin-bottom: 16px;
+        margin-right: 0;
+        text-align: center;
+    }
+}
+@media only screen and (max-width:368px) {
+    .fruits-header__list {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .fruits-header__item {
+        margin-bottom: 8px;
+    }
+}
+
+/*//////////////////////////////////////////////// VIEW WRAP //////////////////////////////////////////////*/
+
+.view-wrap{
+    display: flex;
+    overflow-x: hidden;
+    padding-top: 64px;
+    padding-bottom: 64px;
+}
+
 /*/////////////////////////////////////////////////// LEFT FORM /////////////////////////////////////////////*/
 
 .left-form {
     width: 270px;
+    margin-right: 30px;
 }
 .left-form__wrap{
     width: 100%;
@@ -1657,7 +1640,7 @@ position: relative;
     height: 20px;
 }
 .left-form__output-wrap {
-    width: 250px;
+    max-width: 250px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -1718,6 +1701,125 @@ position: relative;
 .input-form__reset:active{
     color: var(--text-accent-color);
 }
+
+/*//////////////////////////////////// LEFT FORM RESPONSIVE /////////////////////////////////////////////*/
+
+@media only screen and (max-width:1200px) {
+    .view-wrap{
+         flex-direction: column;
+
+    }
+    .left-form {
+        width: 100%;
+        display: flex;
+        margin-bottom: 30px;
+    }
+    .left-form__wrap {
+        max-width: 270px;
+    }
+    .left-form__wrap:not(:last-child){
+        margin-right: 30px;
+    }
+}
+@media only screen and (max-width:845px){
+    .left-form{
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    .left-form__wrap:not(:last-child){
+        margin-right: 0;
+    }
+    .left-form__wrap:nth-of-type(2n + 1){
+        margin-right: 30px;
+    }
+}
+@media only screen and (max-width:619px){
+    .left-form{
+        flex-direction: column;
+        align-items: center;
+    }
+    .left-form__wrap:nth-of-type(2n + 1){
+        margin-right: 0;
+    }
+}
+
+/*///////////////////////////////////// FRUITS PRODUCE WRAP ///////////////////////////////////////////////*/
+
+.fruits-produce__wrap{
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-right: -30px;
+    margin-bottom: -30px;
+}
+.friuts-produce__item{
+    margin-right: 30px;
+    margin-bottom: 30px;
+}
+/*///////////////////////////////////// FRUITS PRODUCE WRAP RESPONSIVE ///////////////////////////////////////////////*/
+
+@media only screen and (max-width:919px){
+    .fruits-produce__wrap{
+        justify-content: space-around;
+    }
+}
+
+/*///////////////////////////////////////// SITE FOOTER /////////////////////////////////////////////////////*/
+
+.site-footer {
+    background-color: var(--bg-white-color);
+    padding-top: 64px;
+    padding-bottom: 64px;
+}
+
+/* FOOTER TOP */
+
+.footer-top {
+    display: block;
+}
+.footer-top__container{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-bottom: 48px;
+}
+.footer-top__wrap{
+    display: flex;
+    align-items: flex-start;
+    width: 50%;
+    justify-content: space-between;
+}
+.footer-top__wrap section{
+    width: 50%;
+    flex-shrink: 0;
+}
+.footer-top__title {
+    font-family: var(--accent-font);
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 27px;
+    margin-top: 0;
+    color: var(--text-accent-color);
+    white-space: nowrap;
+}
+.footer-top__list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+.footer-top__item:not(:last-child) {
+    margin-bottom: 16px;
+}
+.footer-top__link {
+    text-decoration: none;
+    color: var(--btn-color);
+    font-size: 14px;
+    line-height: 19px;
+}
+.footer-top__link:hover{
+    color: var(--btn-color2);
+}
+
 
 /*////////////////////////////////////////////////// FOOTER MAIN //////////////////////////////////////////////////////*/
 
