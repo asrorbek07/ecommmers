@@ -2664,6 +2664,7 @@ position: relative;
 
 .carrot__container {
     display: flex;
+    margin-bottom: 48px;
 }
 .carrot-left__list {
     margin: 0;
